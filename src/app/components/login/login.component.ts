@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  url = 'http://grolfer-api.herokuapp.com/';
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {
   }
@@ -18,7 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log(this.loginCredential.username,this.loginCredential.password);
+    this.http.get(this.url).subscribe((data: any) => {
+      console.log(data)
+    })
   }
 
 }
