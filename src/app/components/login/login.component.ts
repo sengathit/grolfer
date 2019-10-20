@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
     this.http.post(
       this.url,
       {username: 'nasty man',password: 'secrete'}
-    ).subscribe((data) => {
-      this.demo = data
+    ).subscribe(data => {
+      console.log(data)
     },
     error => console.log(error))  
   }
