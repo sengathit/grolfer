@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 
 const app = express()
-const port = process.env.port || 3030
+const port = process.env.PORT || 3030
 
 /**
  * Serve up the static files
