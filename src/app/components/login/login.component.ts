@@ -8,7 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   url = 'http://grolfer-api.herokuapp.com/';
-  demo:{} = null
+  demo:{} = {
+    first: null
+  }
 
   constructor(private http:HttpClient) { }
 
