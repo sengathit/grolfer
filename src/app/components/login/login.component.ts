@@ -23,14 +23,14 @@ export class LoginComponent implements OnInit {
     password : ''
   }
 
-  // login(){
-  //   
-  // }
-
   login(){
-    this.http.post(this.url,this.loginCredential).subscribe((data: any) => {
+    this.http.get(this.url).subscribe((data: any) => {
       this.demo = data
     })
   }
+
+  // login(){
+  //   this.http.post(this.url,this.loginCredential)
+  // }
 
 }
