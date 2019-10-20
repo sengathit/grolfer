@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.http.post(
       this.url,
-      {username: 'nasty man',password: 'secrete'}
+      this.loginCredential
     ).subscribe(data => {
       this.demo = data
     },
