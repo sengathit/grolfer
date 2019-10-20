@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.url,
       {username: 'nasty man',password: 'secrete'}
     ).subscribe(data => {
-      console.log(data)
+      this.demo = data
     },
     error => console.log(error))  
   }
