@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
   url = 'http://grolfer-api.herokuapp.com/';
+  demo:{} = null
 
   constructor(private http:HttpClient) { }
 
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.http.get(this.url).subscribe((data: any) => {
-      console.log(data)
+      this.demo = data
     })
   }
 
