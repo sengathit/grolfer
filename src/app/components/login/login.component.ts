@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.loginCredential
     ).subscribe(data => {
       this.demo.username = true
-      this.users = data
+      this.users = data['rows']
     },
     error => console.log(error))  
   }
