@@ -13,13 +13,15 @@ export class LoginComponent implements OnInit {
     password: null
   };
 
+  users: any;
+
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
   }
 
   loginCredential:any = {
-    username : 'sample@gmail.com',
+    username : 'sample@gmail.com', 
     password : ''
   }
 
@@ -35,6 +37,7 @@ export class LoginComponent implements OnInit {
       this.loginCredential
     ).subscribe(data => {
       this.demo = data
+      this.users = data
     },
     error => console.log(error))  
   }
