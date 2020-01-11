@@ -32,11 +32,10 @@ export class LoginComponent implements OnInit {
   // }
 
   login(){
-    this.http.post(
-      this.url,
-      this.loginCredential
+    this.http.get(
+      this.url
     ).subscribe(data => {
-      this.demo = data
+      this.demo.username = true
       this.users = data
     },
     error => console.log(error))  
