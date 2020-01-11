@@ -32,8 +32,9 @@ export class LoginComponent implements OnInit {
   // }
 
   login(){
-    this.http.get(
-      this.url
+    this.http.post(
+      this.url,
+      this.loginCredential
     ).subscribe(data => {
       this.demo.username = true
       this.users = data
