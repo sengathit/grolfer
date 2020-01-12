@@ -26,16 +26,14 @@
             </form>
         </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-4" *ngIf="demo.username != null">
             <div *ngFor="let user of users">
                 <p>{{user.first_name}} {{user.last_name}}</p>
             </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-12 col-md-4">
             <nav>
                 <a routerLink="/register">Register</a>
