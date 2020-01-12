@@ -30,6 +30,8 @@
         <div class="col-12 col-md-4" *ngIf="demo.username != null">
             <div *ngFor="let user of users">
                 <p>{{user.first_name}} {{user.last_name}}</p>
+                <p>Gender: {{user.gender}}</p>
+                <p>Email: {{user.email}}</p>
             </div>
         </div>
     </div>
