@@ -1,46 +1,23 @@
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-4">
-            <form #loginForm="ngForm">
+        <div class="col-sm-4 col-12">
+            <form>
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <input 
-                        type="text" 
-                        [(ngModel)]="loginCredential.username" 
-                        name="username" 
-                        class="form-control" 
-                        id="username" 
-                        #name="ngModel"
-                        required>
-                    <!-- <div 
-                        [hidden]="user.valid || name.pristine"
-                        class="alert alert-danger">
-                        Name is required
-                    </div> -->
+                    <input type="text" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" [(ngModel)]="loginCredential.password" id="password" required>
+                    <input type="password" class="form-control" required>
                 </div>
-                <button type="submit" class="btn btn-success" (click)="login()">Submit</button>
+                <button type="submit" class="btn btn-success w-100">Login</button>
             </form>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12 col-md-4" *ngIf="demo.username != null">
-            <div *ngFor="let user of users">
-                <p>{{user.first_name}} {{user.last_name}}</p>
-                <p>Gender: {{user.gender}}</p>
-                <p>Email: {{user.email}}</p>
-            </div>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-4">
-            <nav>
-                <a routerLink="/register">Register</a>
-                <a routerLink="/forgot-password">Forgot username/password?</a>
-            </nav>
+        <div class="col-sm-4 col-12">
+            <a routerLink="/register">Register</a>
+            <a routerLink="/forgot-password">Forgot Password?</a>
         </div>
     </div>
 </div>
