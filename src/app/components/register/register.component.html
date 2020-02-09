@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-sm-5 col-12">
+            <form #registerForm="ngForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" name="email" [(ngModel)]="registerCredentials.email" #email="ngModel" required>
+                    <!-- <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Email is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" [(ngModel)]="registerCredentials.username" #username="ngModel" required>
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="registerCredentials.password" #password="ngModel" required>
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" name="first_name" [(ngModel)]="registerCredentials.first_name" #first_name="ngModel" required>
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" [(ngModel)]="registerCredentials.last_name" #last_name="ngModel" required>
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input type="radio" class="d-inline-block form-control" name="gender" [(ngModel)]="registerCredentials.gender" value="male" #gender="ngModel" required>Male | <input type="radio" class="d-inline-block form-control" name="gender" [(ngModel)]="registerCredentials.gender" value="female" #gender="ngModel" required>Female
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <div class="form-group">
+                    <label for="date_of_birth">Date of Birth</label>
+                    <input type="date" class="form-control" name="date_of_birth" [(ngModel)]="registerCredentials.date_of_birth" #date_of_birth="ngModel" required>
+                    <!-- <div [hidden]="username.valid || username.pristine" class="alert alert-danger">Username is required</div> -->
+                </div>
+                <button type="button" (click)="onRegister()" class="btn btn-light">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
